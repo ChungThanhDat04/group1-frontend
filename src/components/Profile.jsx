@@ -34,7 +34,7 @@ const Profile = () => {
             if (!config) return;
 
             try {
-                const res = await axios.get('http://localhost:8000/api/users/profile', config);
+                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/users/profile`, config);
                 setName(res.data.name);
                 setEmail(res.data.email);
                 setAvatarUrl(res.data.avatar || ''); // có thể rỗng nếu chưa có avatar
