@@ -13,7 +13,7 @@ const AdminUserList = () => {
                 headers: { Authorization: `Bearer ${token}` }
             };
 
-            const res = await axios.get('http://localhost:3000/api/users', config);
+            const res = await axios.get('http://localhost:8000/api/users', config);
             setUsers(res.data);
             setIsError(false);
         } catch (error) {
