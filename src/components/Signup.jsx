@@ -12,7 +12,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:3000/api/auth/signup', { name, email, password });
+            const res = await axios.post('http://localhost:8000/api/auth/signup', { name, email, password });
             setMessage(res.data.message); // "Đăng ký thành công"
             setIsError(false);
         } catch (error) {
