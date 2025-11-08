@@ -13,7 +13,7 @@ const AdminUserList = () => {
                 headers: { Authorization: `Bearer ${token}` }
             };
 
-            const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/login`, config);
+            const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/users`, config);
             setUsers(res.data);
             setIsError(false);
         } catch (error) {
