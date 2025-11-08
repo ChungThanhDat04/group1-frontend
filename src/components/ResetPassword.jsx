@@ -12,7 +12,7 @@ const ResetPassword = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.put(`http://localhost:8000/api/auth/reset-password/${token}`, { password });
+            const res = await axios.put(`${process.env.REACT_APP_API_URL}/api/auth/reset-password/${token}`, { password });
             setMessage(res.data.message);
 
             // Chuyển về trang login sau 2 giây
